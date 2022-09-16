@@ -1,0 +1,76 @@
+
+
+<div class="container">
+    <h2 class="text-center">Add Book</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <label for="bookId">BookLogo:</label>
+    <input [(ngModel)]='book.logo'/>
+        </div>
+        <div class="col-md-3">
+            <label for="bookId">Category:</label>
+            <input [(ngModel)]='book.category'/>
+        </div>
+        <div class="col-md-3">
+            <label for="bookId">Title:</label>
+            <input [(ngModel)]='book.title'/>
+        </div>
+        <div class="col-md-3">
+            <label for="author">Author:</label>
+            <input [(ngModel)]='book.author'/>
+        </div>
+        <div class="col-md-3">
+            <label for="bookId">Publisher:</label>
+            <input [(ngModel)]='book.publisher'/>
+        </div>
+        <div class="col-md-3">
+            <label for="bookId">PublishedDate:</label>
+            <input [(ngModel)]='book.publishedDate'/>
+        </div>
+        <div class="col-md-3">
+            <label for="bookId">Price:</label>
+    <input [(ngModel)]='book.price' type="number"/>
+        </div>
+        <div class="col-md-3">
+            <label for="bookId">Content:</label>
+            <input [(ngModel)]='book.content'/>
+        </div>
+        <div class="col-md-3">
+            <label for="bookId">Active:</label>
+    <input [(ngModel)]='book.active'/>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <button class="btn btn-primary" style="margin-left: 10%; size: 500mm;" (click)='save()'>Submit</button>
+
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Author</th>
+            <th scope="col">Category</th>
+            <th scope="col">Logo</th>
+            <th scope="col">Price</th>
+            <th scope="col">publisher</th>
+            <th scope="col">Active</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of book">
+            <th scope="row">{{item.bookId}}</th>
+            <td>{{item.author}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.logo}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.publisher}}</td>
+            <td>{{item.active}}</td>
+          </tr>
+         
+        </tbody>
+      </table>
+</div>
